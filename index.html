@@ -4,9 +4,10 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Jiya Chaudhari — Portfolio</title>
+  <meta name="theme-color" content="#ffd6ec" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Bagel+Fat+One&family=DM+Mono:wght@400;500&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -37,6 +38,7 @@
   <!-- HERO -->
   <section id="hero">
     <div class="hero-content">
+      <div class="hero-text">
       <p class="hero-greeting"><span id="typewriter"></span><span class="cursor">&#9608;</span></p>
       <h1 class="hero-name">Jiya Chaudhari</h1>
       <p class="hero-realname">/* full name: Jiyaben Chaudhari &mdash; but "Jiya" is faster to type */</p>
@@ -49,6 +51,14 @@
         <a href="#projects" class="btn btn-primary">View My Work</a>
         <a href="#contact" class="btn btn-ghost">Say hi!</a>
       </div>
+      </div>
+      <figure class="hero-photo">
+        <span class="sparkle s1" aria-hidden="true">&#10022;</span>
+        <span class="sparkle s2" aria-hidden="true">&#10022;</span>
+        <span class="sparkle s3" aria-hidden="true">&#10022;</span>
+        <img src="images/jiya.jpg" alt="Photo of Jiya Chaudhari" width="400" height="400" />
+        <figcaption>hi, it's me!</figcaption>
+      </figure>
     </div>
     <div class="hero-decoration" aria-hidden="true">
       <div class="blob blob-1"></div>
@@ -373,7 +383,7 @@
           <button class="filter-chip" data-filter="mobile cloud">Mobile & Cloud <span>2</span></button>
       </div>
       <div class="pgrid" id="projects-grid">
-        <article class="pcard" data-cat="web" style="--accent: #FF6FB0; --i: 0;">
+        <article class="pcard" data-cat="web" style="--accent: #ff7ab5; --i: 0;">
           <div class="pcard-cover">
             <span class="pcard-emoji" aria-hidden="true">📸</span>
             <span class="pcard-badge">Live</span>
@@ -390,7 +400,7 @@
             <a href="https://github.com/Jiya4405/flashback-photobooth" target="_blank" rel="noopener" class="pbtn">Code</a>
           </div>
         </article>
-        <article class="pcard" data-cat="ai data" style="--accent: #2BDFC9; --i: 1;">
+        <article class="pcard" data-cat="ai data" style="--accent: #7fd6ff; --i: 1;">
           <div class="pcard-cover">
             <span class="pcard-emoji" aria-hidden="true">🏙️</span>
             <span class="pcard-badge">Hackathon</span>
@@ -406,7 +416,7 @@
             <a href="https://github.com/Jiya4405/ask-the-city" target="_blank" rel="noopener" class="pbtn">Code</a>
           </div>
         </article>
-        <article class="pcard" data-cat="web data" style="--accent: #60A5FA; --i: 2;">
+        <article class="pcard" data-cat="web data" style="--accent: #a8c8ff; --i: 2;">
           <div class="pcard-cover">
             <span class="pcard-emoji" aria-hidden="true">🚓</span>
             <span class="pcard-badge">Live demo</span>
@@ -423,7 +433,7 @@
             <a href="https://github.com/Jiya4405/hackensack-impact" target="_blank" rel="noopener" class="pbtn">Code</a>
           </div>
         </article>
-        <article class="pcard" data-cat="product data" style="--accent: #9D6BFF; --i: 3;">
+        <article class="pcard" data-cat="product data" style="--accent: #c9b8ff; --i: 3;">
           <div class="pcard-cover">
             <span class="pcard-emoji" aria-hidden="true">📉</span>
             <span class="pcard-badge">Live</span>
@@ -440,7 +450,7 @@
             <a href="https://github.com/Jiya4405/product-analytics-apm" target="_blank" rel="noopener" class="pbtn">Code</a>
           </div>
         </article>
-        <article class="pcard" data-cat="ai web" style="--accent: #FFC168; --i: 4;">
+        <article class="pcard" data-cat="ai web" style="--accent: #ffe08a; --i: 4;">
           <div class="pcard-cover">
             <span class="pcard-emoji" aria-hidden="true">📄</span>
             <span class="pcard-badge">Live</span>
@@ -457,7 +467,7 @@
             <a href="https://github.com/Jiya4405/resume-matcher" target="_blank" rel="noopener" class="pbtn">Code</a>
           </div>
         </article>
-        <article class="pcard" data-cat="product data" style="--accent: #FF6FB0; --i: 5;">
+        <article class="pcard" data-cat="product data" style="--accent: #ff7ab5; --i: 5;">
           <div class="pcard-cover">
             <span class="pcard-emoji" aria-hidden="true">🎧</span>
             <span class="pcard-badge">Product analytics</span>
@@ -473,7 +483,7 @@
             <a href="https://github.com/Jiya4405/streamlytics" target="_blank" rel="noopener" class="pbtn">Code</a>
           </div>
         </article>
-        <article class="pcard" data-cat="data" style="--accent: #2BDFC9; --i: 6;">
+        <article class="pcard" data-cat="data" style="--accent: #7fd6ff; --i: 6;">
           <div class="pcard-cover">
             <span class="pcard-emoji" aria-hidden="true">🛒</span>
             <span class="pcard-badge">Data analysis</span>
@@ -489,7 +499,7 @@
             <a href="https://github.com/Jiya4405/olist-ecommerce-analysis" target="_blank" rel="noopener" class="pbtn">Code</a>
           </div>
         </article>
-        <article class="pcard" data-cat="data" style="--accent: #34D399; --i: 7;">
+        <article class="pcard" data-cat="data" style="--accent: #9ff0c8; --i: 7;">
           <div class="pcard-cover">
             <span class="pcard-emoji" aria-hidden="true">📈</span>
             <span class="pcard-badge">Reporting</span>
@@ -505,7 +515,7 @@
             <a href="https://github.com/Jiya4405/nonprofit-program-dashboard" target="_blank" rel="noopener" class="pbtn">Code</a>
           </div>
         </article>
-        <article class="pcard" data-cat="mobile" style="--accent: #34D399; --i: 8;">
+        <article class="pcard" data-cat="mobile" style="--accent: #9ff0c8; --i: 8;">
           <div class="pcard-cover">
             <span class="pcard-emoji" aria-hidden="true">🍵</span>
             <span class="pcard-badge">Mobile</span>
@@ -518,7 +528,7 @@
             <div class="project-tech"><span class="tech-tag">Flutter</span><span class="tech-tag">Dart</span><span class="tech-tag">FastAPI</span><span class="tech-tag">SQLite</span></div>
           </div>
         </article>
-        <article class="pcard" data-cat="data" style="--accent: #FFC168; --i: 9;">
+        <article class="pcard" data-cat="data" style="--accent: #ffe08a; --i: 9;">
           <div class="pcard-cover">
             <span class="pcard-emoji" aria-hidden="true">💹</span>
             <span class="pcard-badge">Finance</span>
@@ -531,7 +541,7 @@
             <div class="project-tech"><span class="tech-tag">Python</span><span class="tech-tag">Pandas</span><span class="tech-tag">Matplotlib</span></div>
           </div>
         </article>
-        <article class="pcard" data-cat="cloud" style="--accent: #A78BFA; --i: 10;">
+        <article class="pcard" data-cat="cloud" style="--accent: #d9b8ff; --i: 10;">
           <div class="pcard-cover">
             <span class="pcard-emoji" aria-hidden="true">☁️</span>
             <span class="pcard-badge">Cloud</span>
