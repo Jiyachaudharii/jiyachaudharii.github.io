@@ -746,47 +746,49 @@ footer {
 .visible { opacity: 1 !important; transform: translateY(0) !important; }
 
 /* =========================================================
-   Y2K PHOTOBOOTH THEME
-   Matches FLASHBACK: bubblegum pink, lilac, sky, butter;
-   grid paper, chunky outlined type, sticker-style cards.
+   PHOTOBOOTH THEME — black, white & cream
+   Vintage B&W photo-strip feel: cream paper, ink outlines,
+   chunky type, hard shadows.
    ========================================================= */
 
 :root {
-  --ground: #fff6fb;
-  --ground-raised: #ffffff;
+  --ground: #f4ecdc;
+  --ground-raised: #fffdf7;
 
-  --violet: #b36bff;
-  --teal: #3cc3f0;
-  --pink: #ff5fa2;
-  --amber: #ffcf4d;
-  --pink-deep: #d81b72;
-  --pink-soft: #ffd6ec;
-  --lilac: #c9b8ff;
-  --sky: #a8e6ff;
-  --butter: #ffe08a;
+  /* legacy accent names, now mapped to the mono palette */
+  --violet: #111111;
+  --teal: #111111;
+  --pink: #111111;
+  --amber: #d9c7a3;
+  --pink-deep: #111111;
+  --pink-soft: #ece1cb;
+  --lilac: #d9cdb4;
+  --sky: #e8dfcc;
+  --butter: #f6eedb;
 
-  --ink: #2a1838;
-  --ink-dim: #5b4769;
-  --ink-faint: #8a7799;
+  --cream: #f4ecdc;
+  --cream-deep: #e3d5b8;
 
-  --glass-bg: rgba(255, 255, 255, 0.8);
+  --ink: #111111;
+  --ink-dim: #3d3a35;
+  --ink-faint: #7a7368;
+
+  --glass-bg: #fffdf7;
   --glass-bg-hover: #ffffff;
   --glass-border: var(--ink);
-  --glass-border-hover: var(--pink-deep);
+  --glass-border-hover: var(--ink);
 
   --font-display: 'Bagel Fat One', system-ui, sans-serif;
   --font-body: 'DM Sans', system-ui, -apple-system, sans-serif;
   --font-mono: 'DM Mono', ui-monospace, monospace;
 
   --shadow-glass: 4px 4px 0 var(--ink);
-  --shadow-glass-hover: 7px 7px 0 var(--pink);
+  --shadow-glass-hover: 7px 7px 0 var(--ink);
 }
 
 body {
   background:
-    radial-gradient(1200px 600px at 10% -10%, #ffe1f0 0%, transparent 60%),
-    radial-gradient(900px 600px at 110% 10%, #e3dbff 0%, transparent 60%),
-    radial-gradient(800px 600px at 50% 120%, #d6f3ff 0%, transparent 60%),
+    radial-gradient(1200px 700px at 50% -10%, #fbf6ec 0%, transparent 60%),
     var(--ground);
   background-attachment: fixed;
 }
@@ -794,8 +796,8 @@ body {
 /* Grid paper + floating sparkles replace the aurora blobs */
 .aurora {
   background-image:
-    linear-gradient(rgba(42, 24, 56, 0.09) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(42, 24, 56, 0.09) 1px, transparent 1px);
+    linear-gradient(rgba(17, 17, 17, 0.07) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(17, 17, 17, 0.07) 1px, transparent 1px);
   background-size: 32px 32px;
 }
 .aurora-blob {
@@ -820,7 +822,7 @@ body {
   50% { transform: scale(0.7) rotate(25deg); opacity: 0.4; }
 }
 
-::selection { background: var(--pink); color: #fff; }
+::selection { background: var(--ink); color: var(--cream); }
 :focus-visible { outline-color: var(--violet); }
 
 /* Cards: white stickers with ink outline and hard shadow */
@@ -842,7 +844,7 @@ body {
 .skill-group::before,
 .pcard::before,
 .contact-card::before {
-  background: radial-gradient(260px circle at var(--mx, 50%) var(--my, 50%), rgba(255, 95, 162, 0.12), transparent 70%);
+  background: radial-gradient(260px circle at var(--mx, 50%) var(--my, 50%), rgba(17, 17, 17, 0.05), transparent 70%);
 }
 
 /* Section titles: chunky bubble letters */
@@ -850,7 +852,7 @@ body {
   font-family: var(--font-display);
   font-weight: 400;
   letter-spacing: 0;
-  color: var(--pink);
+  color: var(--cream);
   -webkit-text-stroke: 1.5px var(--ink);
   text-shadow: 3px 3px 0 var(--ink);
 }
@@ -859,7 +861,7 @@ h3 { font-family: var(--font-body); font-weight: 700; }
 
 /* Nav */
 #navbar {
-  background: rgba(255, 255, 255, 0.85);
+  background: rgba(255, 253, 247, 0.9);
   border: 2px solid var(--ink);
   box-shadow: 3px 3px 0 var(--ink);
 }
@@ -867,11 +869,12 @@ h3 { font-family: var(--font-body); font-weight: 700; }
   font-family: var(--font-display);
   font-size: 1.35rem;
   background: none;
-  color: var(--pink);
+  color: var(--cream);
   -webkit-text-stroke: 1px var(--ink);
+  text-shadow: 2px 2px 0 var(--ink);
 }
 .nav-links a { color: var(--ink-dim); }
-.nav-links a:hover { color: var(--ink); background: var(--pink-soft); }
+.nav-links a:hover { color: var(--cream); background: var(--ink); }
 .nav-toggle { background: var(--pink-soft); border: 2px solid var(--ink); }
 @media (max-width: 760px) {
   .nav-links { background: #fff; border: 2px solid var(--ink); box-shadow: 3px 3px 0 var(--ink); }
@@ -891,12 +894,12 @@ h3 { font-family: var(--font-body); font-weight: 700; }
   font-weight: 400;
   font-size: clamp(3.2rem, 9vw, 6.4rem);
   line-height: 0.92;
-  background: linear-gradient(180deg, #fff 0%, #ffd0e6 18%, var(--pink) 48%, #b36bff 78%, #7fd6ff 100%);
+  background: linear-gradient(180deg, #fffdf7 0%, var(--cream) 55%, var(--cream-deep) 100%);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
   -webkit-text-stroke: 2px var(--ink);
-  filter: drop-shadow(4px 5px 0 var(--ink));
+  filter: drop-shadow(5px 5px 0 var(--ink));
 }
 .hero-realname { color: var(--ink-faint); }
 .hero-tagline { color: var(--ink); }
@@ -908,7 +911,7 @@ h3 { font-family: var(--font-body); font-weight: 700; }
   position: relative;
   width: min(280px, 70vw);
   padding: 14px 14px 0;
-  background: linear-gradient(#ffe3f1, #ffc6e3);
+  background: #fffdf7;
   border: 2px solid var(--ink);
   border-radius: 8px;
   box-shadow: 8px 8px 0 var(--ink);
@@ -923,11 +926,14 @@ h3 { font-family: var(--font-body); font-weight: 700; }
   object-fit: cover;
   border: 2px solid var(--ink);
   border-radius: 4px;
-  background: var(--pink-soft);
+  background: var(--cream);
+  filter: grayscale(1) contrast(1.05);
+  transition: filter 0.5s ease;
 }
+.hero-photo:hover img { filter: grayscale(0); }
 .hero-photo figcaption {
   font-family: var(--font-display);
-  color: var(--pink-deep);
+  color: var(--ink);
   text-align: center;
   font-size: 1.3rem;
   padding: 0.55rem 0 0.7rem;
@@ -955,22 +961,22 @@ h3 { font-family: var(--font-body); font-weight: 700; }
 /* Buttons */
 .btn { border: 2px solid var(--ink); }
 .btn-primary {
-  color: #fff;
-  background: linear-gradient(180deg, #ff7ab5, var(--pink) 55%, var(--pink-deep));
-  box-shadow: 3px 3px 0 var(--ink);
-  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.15);
+  color: var(--cream);
+  background: var(--ink);
+  box-shadow: 3px 3px 0 var(--cream-deep);
+  text-shadow: none;
 }
-.btn-primary:hover { transform: translate(-2px, -2px); box-shadow: 5px 5px 0 var(--ink); }
+.btn-primary:hover { transform: translate(-2px, -2px); box-shadow: 5px 5px 0 var(--cream-deep); }
 .btn-ghost { background: #fff; color: var(--ink); border-color: var(--ink); box-shadow: 3px 3px 0 var(--ink); }
-.btn-ghost:hover { background: var(--butter); border-color: var(--ink); transform: translate(-2px, -2px); }
+.btn-ghost:hover { background: var(--cream); border-color: var(--ink); transform: translate(-2px, -2px); }
 
 /* About */
 .about-text strong { color: var(--ink); }
 .about-text em { color: var(--pink-deep); }
-.stat-card:nth-child(4n+1) { background: var(--pink-soft); }
-.stat-card:nth-child(4n+2) { background: #ece5ff; }
-.stat-card:nth-child(4n+3) { background: #dcf5ff; }
-.stat-card:nth-child(4n+4) { background: #fff3c9; }
+.stat-card:nth-child(odd) { background: #fffdf7; }
+.stat-card:nth-child(even) { background: var(--ink); }
+.stat-card:nth-child(even) .stat-number { color: var(--cream); }
+.stat-card:nth-child(even) .stat-label { color: var(--cream-deep); }
 .stat-number {
   font-family: var(--font-display);
   font-weight: 400;
@@ -986,52 +992,51 @@ h3 { font-family: var(--font-body); font-weight: 700; }
   opacity: 0.5;
 }
 .timeline-dot {
-  background: var(--pink);
+  background: var(--ink);
   border: 2px solid var(--ink);
-  box-shadow: none;
+  box-shadow: 0 0 0 3px var(--cream);
   width: 14px; height: 14px;
 }
-.timeline-item:nth-child(3n+2) .timeline-dot { background: var(--lilac); }
-.timeline-item:nth-child(3n+3) .timeline-dot { background: var(--sky); }
+.timeline-item:nth-child(even) .timeline-dot { background: var(--cream); }
 .timeline-card:hover, .edu-card:hover, .skill-group:hover {
   transform: translate(-2px, -2px);
-  box-shadow: 6px 6px 0 var(--pink);
+  box-shadow: 6px 6px 0 var(--ink);
 }
 
 .tech-tag {
-  background: #fff;
+  background: var(--cream);
   border: 1.5px solid var(--ink);
   color: var(--ink);
 }
 
 /* Skills */
-.skill-group-title { color: var(--pink-deep); }
+.skill-group-title { color: var(--ink); text-transform: uppercase; letter-spacing: 0.08em; }
 .tag {
-  background: #fff;
-  border: 1.5px solid rgba(42, 24, 56, 0.25);
+  background: #fffdf7;
+  border: 1.5px solid rgba(17, 17, 17, 0.25);
   color: var(--ink);
 }
-.tag:hover { color: var(--ink); border-color: var(--ink); background: var(--butter); }
+.tag:hover { color: var(--cream); border-color: var(--ink); background: var(--ink); }
 
 /* Projects */
 .projects-sub { color: var(--ink-dim); }
-.filter-chip { background: #fff; border: 2px solid var(--ink); color: var(--ink); }
-.filter-chip:hover { color: var(--ink); border-color: var(--ink); background: var(--pink-soft); }
+.filter-chip { background: #fffdf7; border: 2px solid var(--ink); color: var(--ink); }
+.filter-chip:hover { color: var(--ink); border-color: var(--ink); background: var(--cream); }
 .filter-chip.active {
-  color: #fff;
-  background: linear-gradient(180deg, #ff7ab5, var(--pink) 55%, var(--pink-deep));
+  color: var(--cream);
+  background: var(--ink);
   border-color: var(--ink);
-  box-shadow: 2px 2px 0 var(--ink);
+  box-shadow: 2px 2px 0 var(--cream-deep);
 }
 .pcard:hover {
   transform: translate(-3px, -4px) rotate(-0.6deg);
   border-color: var(--ink);
-  box-shadow: 8px 8px 0 var(--accent);
+  box-shadow: 8px 8px 0 var(--ink);
 }
 .pcard-cover {
   background:
-    radial-gradient(circle at 25% 20%, rgba(255, 255, 255, 0.85), transparent 45%),
-    linear-gradient(135deg, var(--accent), color-mix(in srgb, var(--accent) 45%, #fff));
+    radial-gradient(circle at 25% 20%, rgba(255, 255, 255, 0.7), transparent 45%),
+    var(--accent);
   border-bottom: 2px solid var(--ink);
 }
 .pcard-badge {
@@ -1040,24 +1045,31 @@ h3 { font-family: var(--font-body); font-weight: 700; }
   border: 1.5px solid var(--ink);
 }
 .pcard-sub { color: var(--ink-faint); }
-.pcard-stat { color: color-mix(in srgb, var(--accent) 45%, var(--ink)); }
+.pcard-stat { color: var(--ink); }
 .pcard-desc { color: var(--ink-dim); }
-.pbtn { background: #fff; color: var(--ink); border: 2px solid var(--ink); }
-.pbtn:hover { border-color: var(--ink); background: var(--butter); }
+.pbtn { background: #fffdf7; color: var(--ink); border: 2px solid var(--ink); }
+.pbtn:hover { border-color: var(--ink); background: var(--cream); }
 .pbtn-live {
-  color: #fff;
-  background: linear-gradient(180deg, #ff7ab5, var(--pink) 55%, var(--pink-deep));
+  color: var(--cream);
+  background: var(--ink);
   border-color: var(--ink);
-  box-shadow: 2px 2px 0 var(--ink);
+  box-shadow: 2px 2px 0 var(--cream-deep);
 }
-.pbtn-live:hover { background: linear-gradient(180deg, #ff7ab5, var(--pink) 55%, var(--pink-deep)); filter: none; }
+.pbtn-live:hover { background: var(--ink); filter: none; }
 
 /* Contact + footer */
 .contact-sub { color: var(--ink-dim); }
-.contact-card svg { color: var(--pink-deep); }
-.contact-card:hover { transform: translate(-2px, -3px); border-color: var(--ink); box-shadow: 6px 6px 0 var(--pink); }
+.contact-card svg { color: var(--ink); }
+.contact-card:hover { transform: translate(-2px, -3px); border-color: var(--ink); box-shadow: 6px 6px 0 var(--ink); }
 footer { color: var(--ink-faint); }
 
 @media (prefers-reduced-motion: reduce) {
   .hero-photo, .hero-photo .sparkle, .aurora-blob { animation: none; }
 }
+
+/* Mono photobooth touches */
+.pcard-emoji { filter: grayscale(1) contrast(1.1) drop-shadow(0 6px 10px rgba(0,0,0,0.25)); transition: transform 0.4s cubic-bezier(.2,.8,.3,1.4), filter 0.4s ease; }
+.pcard:hover .pcard-emoji { filter: grayscale(0) drop-shadow(0 6px 10px rgba(0,0,0,0.25)); }
+.pcard-badge { background: var(--ink); color: var(--cream); border-color: var(--ink); }
+.hero-photo .s1, .hero-photo .s2, .hero-photo .s3,
+.blob-violet, .blob-teal, .blob-pink { color: var(--ink); }
