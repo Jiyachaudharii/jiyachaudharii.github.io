@@ -362,259 +362,196 @@
   <!-- PROJECTS -->
   <section id="projects">
     <div class="container">
-      <div class="projects-header">
-        <h2 class="section-title">Projects</h2>
-        <button id="view-toggle" class="view-toggle-btn">View all projects &rarr;</button>
+      <h2 class="section-title">Projects</h2>
+      <p class="projects-sub">11 things I've built, from data deep-dives to apps you can play with. Pick a filter or just scroll.</p>
+      <div class="filter-bar" role="toolbar" aria-label="Filter projects">
+          <button class="filter-chip active" data-filter="all">All <span>11</span></button>
+          <button class="filter-chip" data-filter="data">Data & Analytics <span>7</span></button>
+          <button class="filter-chip" data-filter="web">Web Apps <span>3</span></button>
+          <button class="filter-chip" data-filter="ai">AI <span>2</span></button>
+          <button class="filter-chip" data-filter="product">Product <span>2</span></button>
+          <button class="filter-chip" data-filter="mobile cloud">Mobile & Cloud <span>2</span></button>
       </div>
-      <div class="carousel-nav" id="carousel-nav">
-        <button id="prev-project" class="carousel-btn" aria-label="Previous project">&larr; Previous</button>
-        <span id="carousel-counter" class="carousel-counter">1 / 11</span>
-        <button id="next-project" class="carousel-btn" aria-label="Next project">Next &rarr;</button>
-      </div>
-      <div class="projects-grid carousel-mode" id="projects-grid">
-
-        <div class="project-card featured active">
-          <div class="project-header">
-            <span class="project-badge badge-live">Live</span>
-            <div class="project-links">
-              <a href="https://jiya4405.github.io/product-analytics-apm/" target="_blank" rel="noopener" class="icon-link" title="Live Demo">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-              </a>
-              <a href="https://github.com/Jiya4405/product-analytics-apm" target="_blank" rel="noopener" class="icon-link" title="GitHub">
-                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
-              </a>
-            </div>
+      <div class="pgrid" id="projects-grid">
+        <article class="pcard" data-cat="web" style="--accent: #FF6FB0; --i: 0;">
+          <div class="pcard-cover">
+            <span class="pcard-emoji" aria-hidden="true">📸</span>
+            <span class="pcard-badge">Live</span>
           </div>
-          <h3 class="project-title">Retention Investigation Studio</h3>
-          <p class="project-desc">
-            Product analytics case study on simulated B2B SaaS clickstream data: SQL cohort retention, DAU/MAU stickiness, and incident detection that traces a churn spike to a 2FA rollout. Delivered as a &ldquo;Decision Center&rdquo; dashboard that names a root cause, a recommended experiment, and an owner, backed by a PRD.
-          </p>
-          <div class="project-tech">
-            <span class="tech-tag">SQL</span>
-            <span class="tech-tag">DuckDB</span>
-            <span class="tech-tag">Python</span>
-            <span class="tech-tag">Cohort Analysis</span>
-            <span class="tech-tag">Product Analytics</span>
+          <div class="pcard-body">
+            <h3 class="pcard-title">FLASHBACK</h3>
+            <p class="pcard-sub">Browser photo booth</p>
+            <p class="pcard-stat">&#10022; 0 uploads — photos stay on your device</p>
+            <p class="pcard-desc">A free, no-sign-up photo booth: four-shot countdown, vintage filters, cute strip designs, and a downloadable photo strip.</p>
+            <div class="project-tech"><span class="tech-tag">React</span><span class="tech-tag">TypeScript</span><span class="tech-tag">Vite</span><span class="tech-tag">Canvas</span></div>
           </div>
-        </div>
-
-        <div class="project-card featured">
-          <div class="project-header">
-            <span class="project-badge badge-backend">Open Source</span>
-            <div class="project-links">
-              <a href="https://github.com/Jiya4405/ask-the-city" target="_blank" rel="noopener" class="icon-link" title="GitHub">
-                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
-              </a>
-            </div>
+          <div class="pcard-actions">
+            <a href="https://jiya4405.github.io/flashback-photobooth/" target="_blank" rel="noopener" class="pbtn pbtn-live">Try it live &nearr;</a>
+            <a href="https://github.com/Jiya4405/flashback-photobooth" target="_blank" rel="noopener" class="pbtn">Code</a>
           </div>
-          <h3 class="project-title">Ask the City &mdash; Civic Open-Data Analyst</h3>
-          <p class="project-desc">
-            Hackathon project: an agent that answers plain-English questions about a city from live government open-data portals. It finds the right dataset, writes and runs the query, fixes its own errors, charts the result, and fact-checks every number against the fetched data. Runs free and private on a local model.
-          </p>
-          <div class="project-tech">
-            <span class="tech-tag">Python</span>
-            <span class="tech-tag">Ollama</span>
-            <span class="tech-tag">Socrata API</span>
-            <span class="tech-tag">Plotly</span>
-            <span class="tech-tag">Tool Calling</span>
+        </article>
+        <article class="pcard" data-cat="ai data" style="--accent: #2BDFC9; --i: 1;">
+          <div class="pcard-cover">
+            <span class="pcard-emoji" aria-hidden="true">🏙️</span>
+            <span class="pcard-badge">Hackathon</span>
           </div>
-        </div>
-
-        <div class="project-card featured">
-          <div class="project-header">
-            <span class="project-badge badge-live">Live</span>
-            <div class="project-links">
-              <a href="https://jiya4405.github.io/flashback-photobooth/" target="_blank" rel="noopener" class="icon-link" title="Live Demo">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-              </a>
-              <a href="https://github.com/Jiya4405/flashback-photobooth" target="_blank" rel="noopener" class="icon-link" title="GitHub">
-                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
-              </a>
-            </div>
+          <div class="pcard-body">
+            <h3 class="pcard-title">Ask the City</h3>
+            <p class="pcard-sub">Civic open-data analyst</p>
+            <p class="pcard-stat">&#10022; Fact-checks every number it reports</p>
+            <p class="pcard-desc">Ask a plain-English question about your city. An agent finds the right open dataset, runs the query, charts it, and verifies the answer against live data.</p>
+            <div class="project-tech"><span class="tech-tag">Python</span><span class="tech-tag">Ollama</span><span class="tech-tag">Socrata API</span><span class="tech-tag">Plotly</span></div>
           </div>
-          <h3 class="project-title">FLASHBACK &mdash; Browser Photo Booth</h3>
-          <p class="project-desc">
-            A free, no-sign-up photo booth that runs entirely in the browser: four-shot countdown, vintage filters, strip designs, and a downloadable photo strip. Photos never leave the device &mdash; no backend, no account, no upload.
-          </p>
-          <div class="project-tech">
-            <span class="tech-tag">React</span>
-            <span class="tech-tag">TypeScript</span>
-            <span class="tech-tag">Vite</span>
-            <span class="tech-tag">HTML Canvas</span>
+          <div class="pcard-actions">
+            <a href="https://github.com/Jiya4405/ask-the-city" target="_blank" rel="noopener" class="pbtn">Code</a>
           </div>
-        </div>
-
-        <div class="project-card featured">
-          <div class="project-header">
-            <span class="project-badge badge-live">Live</span>
-            <div class="project-links">
-              <a href="https://jiya-resume-matcher.streamlit.app" target="_blank" rel="noopener" class="icon-link" title="Live Demo">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-              </a>
-              <a href="https://github.com/Jiya4405/resume-matcher" target="_blank" rel="noopener" class="icon-link" title="GitHub">
-                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
-              </a>
-            </div>
+        </article>
+        <article class="pcard" data-cat="web data" style="--accent: #60A5FA; --i: 2;">
+          <div class="pcard-cover">
+            <span class="pcard-emoji" aria-hidden="true">🚓</span>
+            <span class="pcard-badge">In progress</span>
           </div>
-          <h3 class="project-title">Resume&ndash;Job Matching AI</h3>
-          <p class="project-desc">
-            NLP-powered tool that scores how well a resume matches a job description using 384-dimensional semantic embeddings.
-            Surfaces matched, missing, and bonus skills with personalised improvement tips.
-          </p>
-          <div class="project-tech">
-            <span class="tech-tag">Python</span>
-            <span class="tech-tag">sentence-transformers</span>
-            <span class="tech-tag">scikit-learn</span>
-            <span class="tech-tag">Streamlit</span>
+          <div class="pcard-body">
+            <h3 class="pcard-title">Hackensack IMPACT</h3>
+            <p class="pcard-sub">Crime incident dashboard</p>
+            <p class="pcard-stat">&#10022; Built with Hackensack PD stakeholders</p>
+            <p class="pcard-desc">An interactive incident map with filterable statistics and category breakdowns, prototyped with sample data ahead of a planned live-data rollout.</p>
+            <div class="project-tech"><span class="tech-tag">JavaScript</span><span class="tech-tag">Leaflet</span><span class="tech-tag">HTML</span><span class="tech-tag">CSS</span></div>
           </div>
-        </div>
-
-        <div class="project-card featured">
-          <div class="project-header">
-            <span class="project-badge badge-mobile">In Progress</span>
-            <div class="project-links"></div>
+          <div class="pcard-actions">
+            <span class="pbtn pbtn-muted">Demo coming soon</span>
           </div>
-          <h3 class="project-title">Hackensack IMPACT &mdash; Crime Incident Dashboard</h3>
-          <p class="project-desc">
-            Working with a faculty advisor and Hackensack Police Department stakeholders to translate requirements into a
-            lightweight interactive web prototype. Designed an incident-map visualization, filterable statistics, and category
-            breakdowns using sample data to validate the concept before a planned live-data rollout.
-          </p>
-          <div class="project-tech">
-            <span class="tech-tag">HTML</span>
-            <span class="tech-tag">CSS</span>
-            <span class="tech-tag">JavaScript</span>
-            <span class="tech-tag">Leaflet</span>
+        </article>
+        <article class="pcard" data-cat="product data" style="--accent: #9D6BFF; --i: 3;">
+          <div class="pcard-cover">
+            <span class="pcard-emoji" aria-hidden="true">📉</span>
+            <span class="pcard-badge">Live</span>
           </div>
-        </div>
-
-        <div class="project-card featured">
-          <div class="project-header">
-            <span class="project-badge badge-analytics">Product Analytics</span>
-            <div class="project-links">
-              <a href="https://github.com/Jiya4405/streamlytics" target="_blank" rel="noopener" class="icon-link" title="GitHub">
-                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
-              </a>
-            </div>
+          <div class="pcard-body">
+            <h3 class="pcard-title">Retention Investigation Studio</h3>
+            <p class="pcard-sub">Product analytics case study</p>
+            <p class="pcard-stat">&#10022; Traced a churn spike to a 2FA rollout</p>
+            <p class="pcard-desc">SQL cohort retention, DAU/MAU stickiness, and incident detection, wrapped in a “Decision Center” dashboard that names a root cause, an experiment, and an owner.</p>
+            <div class="project-tech"><span class="tech-tag">SQL</span><span class="tech-tag">DuckDB</span><span class="tech-tag">Python</span><span class="tech-tag">PRD</span></div>
           </div>
-          <h3 class="project-title">Streamlytics &mdash; Music Streaming Retention Analysis</h3>
-          <p class="project-desc">
-            End-to-end product analytics case study on a simulated music streaming platform (50K users, 26M events).
-            Identified that paid social drives 30.4% Day-30 retention vs. 84.7% for referral — a 54pp gap — using
-            SQL funnel, cohort, and engagement analysis. Delivered 3 quantified product recommendations and a
-            statistically designed A/B test plan.
-          </p>
-          <div class="project-tech">
-            <span class="tech-tag">SQL</span>
-            <span class="tech-tag">Python</span>
-            <span class="tech-tag">Cohort Analysis</span>
-            <span class="tech-tag">Retention Analysis</span>
-            <span class="tech-tag">A/B Testing</span>
-            <span class="tech-tag">Matplotlib</span>
+          <div class="pcard-actions">
+            <a href="https://jiya4405.github.io/product-analytics-apm/" target="_blank" rel="noopener" class="pbtn pbtn-live">Try it live &nearr;</a>
+            <a href="https://github.com/Jiya4405/product-analytics-apm" target="_blank" rel="noopener" class="pbtn">Code</a>
           </div>
-        </div>
-
-        <div class="project-card featured">
-          <div class="project-header">
-            <span class="project-badge badge-analytics">Data Analysis</span>
-            <div class="project-links">
-              <a href="https://github.com/Jiya4405/olist-ecommerce-analysis" target="_blank" rel="noopener" class="icon-link" title="GitHub">
-                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
-              </a>
-            </div>
+        </article>
+        <article class="pcard" data-cat="ai web" style="--accent: #FFC168; --i: 4;">
+          <div class="pcard-cover">
+            <span class="pcard-emoji" aria-hidden="true">📄</span>
+            <span class="pcard-badge">Live</span>
           </div>
-          <h3 class="project-title">Olist Brazilian E-Commerce Analysis</h3>
-          <p class="project-desc">
-            End-to-end analysis of 99,000+ real e-commerce orders across 9 relational tables. Used SQL (joins,
-            window functions) and pandas to find that on-time delivery lifts average review scores 65% (4.21 vs.
-            2.55/5) and surfaced a 3x regional delivery gap, turning both into concrete logistics recommendations.
-            Packaged into an interactive Dash dashboard and a one-page business memo.
-          </p>
-          <div class="project-tech">
-            <span class="tech-tag">SQL</span>
-            <span class="tech-tag">Python</span>
-            <span class="tech-tag">Pandas</span>
-            <span class="tech-tag">Dash / Plotly</span>
+          <div class="pcard-body">
+            <h3 class="pcard-title">Resume–Job Matching AI</h3>
+            <p class="pcard-sub">NLP match scorer</p>
+            <p class="pcard-stat">&#10022; Tracks 80+ skills</p>
+            <p class="pcard-desc">Paste a resume and a job description to get a match score plus matched, missing, and bonus skills with improvement tips.</p>
+            <div class="project-tech"><span class="tech-tag">Python</span><span class="tech-tag">NLP</span><span class="tech-tag">scikit-learn</span><span class="tech-tag">Streamlit</span></div>
           </div>
-        </div>
-
-        <div class="project-card">
-          <div class="project-header">
-            <span class="project-badge badge-finance">Reporting</span>
-            <div class="project-links">
-              <a href="https://github.com/Jiya4405/nonprofit-program-dashboard" target="_blank" rel="noopener" class="icon-link" title="GitHub">
-                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
-              </a>
-            </div>
+          <div class="pcard-actions">
+            <a href="https://jiya-resume-matcher.streamlit.app" target="_blank" rel="noopener" class="pbtn pbtn-live">Try it live &nearr;</a>
+            <a href="https://github.com/Jiya4405/resume-matcher" target="_blank" rel="noopener" class="pbtn">Code</a>
           </div>
-          <h3 class="project-title">Nonprofit Program Impact &amp; Data Quality Dashboard</h3>
-          <p class="project-desc">
-            Interactive Excel dashboard (sample dataset) built for program reporting: live dropdown filter that
-            recalculates KPIs and charts in real time, plus a data-quality monitoring view that flags incomplete
-            or inconsistent records and calculates an overall accuracy rate ahead of funder/contract reporting.
-          </p>
-          <div class="project-tech">
-            <span class="tech-tag">Excel</span>
-            <span class="tech-tag">Data Validation</span>
-            <span class="tech-tag">KPI Reporting</span>
-            <span class="tech-tag">Data Quality</span>
+        </article>
+        <article class="pcard" data-cat="product data" style="--accent: #FF6FB0; --i: 5;">
+          <div class="pcard-cover">
+            <span class="pcard-emoji" aria-hidden="true">🎧</span>
+            <span class="pcard-badge">Product analytics</span>
           </div>
-        </div>
-
-        <div class="project-card">
-          <div class="project-header">
-            <span class="project-badge badge-mobile">Mobile</span>
-            <div class="project-links"></div>
+          <div class="pcard-body">
+            <h3 class="pcard-title">Streamlytics</h3>
+            <p class="pcard-sub">Music streaming retention</p>
+            <p class="pcard-stat">&#10022; Found a 54-point retention gap by channel</p>
+            <p class="pcard-desc">Funnel, cohort, and engagement analysis on 50K users and 26M events, with 3 product recommendations and an A/B test plan.</p>
+            <div class="project-tech"><span class="tech-tag">SQL</span><span class="tech-tag">Python</span><span class="tech-tag">Cohorts</span><span class="tech-tag">A/B Testing</span></div>
           </div>
-          <h3 class="project-title">Jivan &mdash; Two-Sided Marketplace App</h3>
-          <p class="project-desc">
-            Full-stack Flutter mobile platform with a consumer app and a provider app.
-            Supports demand tracking, order management, and KPI monitoring dashboards.
-          </p>
-          <div class="project-tech">
-            <span class="tech-tag">Flutter</span>
-            <span class="tech-tag">Dart</span>
-            <span class="tech-tag">FastAPI</span>
-            <span class="tech-tag">SQLite</span>
+          <div class="pcard-actions">
+            <a href="https://github.com/Jiya4405/streamlytics" target="_blank" rel="noopener" class="pbtn">Code</a>
           </div>
-        </div>
-
-        <div class="project-card">
-          <div class="project-header">
-            <span class="project-badge badge-finance">Finance</span>
-            <div class="project-links"></div>
+        </article>
+        <article class="pcard" data-cat="data" style="--accent: #2BDFC9; --i: 6;">
+          <div class="pcard-cover">
+            <span class="pcard-emoji" aria-hidden="true">🛒</span>
+            <span class="pcard-badge">Data analysis</span>
           </div>
-          <h3 class="project-title">Amazon Stock vs Federal Funds Rate</h3>
-          <p class="project-desc">
-            Analysed long-term financial data to evaluate how macroeconomic policy (Fed rate changes)
-            correlates with equity market performance using time-series analysis.
-          </p>
-          <div class="project-tech">
-            <span class="tech-tag">Python</span>
-            <span class="tech-tag">Pandas</span>
-            <span class="tech-tag">Matplotlib</span>
-            <span class="tech-tag">NumPy</span>
+          <div class="pcard-body">
+            <h3 class="pcard-title">Olist E-Commerce</h3>
+            <p class="pcard-sub">What drives happy customers?</p>
+            <p class="pcard-stat">&#10022; 99K+ orders · 4.21 vs 2.55 review score</p>
+            <p class="pcard-desc">On-time delivery lifts review scores sharply, and there's a 3x regional delivery gap. Delivered as a Dash dashboard and a one-page memo.</p>
+            <div class="project-tech"><span class="tech-tag">SQL</span><span class="tech-tag">Pandas</span><span class="tech-tag">Dash / Plotly</span></div>
           </div>
-        </div>
-
-        <div class="project-card">
-          <div class="project-header">
-            <span class="project-badge badge-cloud">Cloud</span>
-            <div class="project-links"></div>
+          <div class="pcard-actions">
+            <a href="https://github.com/Jiya4405/olist-ecommerce-analysis" target="_blank" rel="noopener" class="pbtn">Code</a>
           </div>
-          <h3 class="project-title">AWS Auto-Scaling Infrastructure</h3>
-          <p class="project-desc">
-            Designed and automated a resilient AWS architecture with EC2 Auto Scaling Groups,
-            Network Load Balancers, and self-healing EC2 recovery scripts using boto3.
-          </p>
-          <div class="project-tech">
-            <span class="tech-tag">AWS EC2</span>
-            <span class="tech-tag">Auto Scaling</span>
-            <span class="tech-tag">NLB</span>
-            <span class="tech-tag">boto3</span>
+        </article>
+        <article class="pcard" data-cat="data" style="--accent: #34D399; --i: 7;">
+          <div class="pcard-cover">
+            <span class="pcard-emoji" aria-hidden="true">📈</span>
+            <span class="pcard-badge">Reporting</span>
           </div>
-        </div>
-
+          <div class="pcard-body">
+            <h3 class="pcard-title">Nonprofit Impact Dashboard</h3>
+            <p class="pcard-sub">KPIs + data-quality checks</p>
+            <p class="pcard-stat">&#10022; Live filter · accuracy-rate monitor</p>
+            <p class="pcard-desc">An Excel dashboard whose KPIs and charts update from a dropdown, plus a view that flags incomplete or inconsistent records before funder reporting.</p>
+            <div class="project-tech"><span class="tech-tag">Excel</span><span class="tech-tag">Data Validation</span><span class="tech-tag">KPI Reporting</span></div>
+          </div>
+          <div class="pcard-actions">
+            <a href="https://github.com/Jiya4405/nonprofit-program-dashboard" target="_blank" rel="noopener" class="pbtn">Code</a>
+          </div>
+        </article>
+        <article class="pcard" data-cat="mobile" style="--accent: #34D399; --i: 8;">
+          <div class="pcard-cover">
+            <span class="pcard-emoji" aria-hidden="true">🍵</span>
+            <span class="pcard-badge">Mobile</span>
+          </div>
+          <div class="pcard-body">
+            <h3 class="pcard-title">Jivan Marketplace App</h3>
+            <p class="pcard-sub">Two-sided Flutter platform</p>
+            <p class="pcard-stat">&#10022; Consumer app + provider app</p>
+            <p class="pcard-desc">A full-stack mobile marketplace with demand tracking, order management, and KPI monitoring dashboards.</p>
+            <div class="project-tech"><span class="tech-tag">Flutter</span><span class="tech-tag">Dart</span><span class="tech-tag">FastAPI</span><span class="tech-tag">SQLite</span></div>
+          </div>
+          <div class="pcard-actions">
+            <span class="pbtn pbtn-muted">Demo coming soon</span>
+          </div>
+        </article>
+        <article class="pcard" data-cat="data" style="--accent: #FFC168; --i: 9;">
+          <div class="pcard-cover">
+            <span class="pcard-emoji" aria-hidden="true">💹</span>
+            <span class="pcard-badge">Finance</span>
+          </div>
+          <div class="pcard-body">
+            <h3 class="pcard-title">Amazon Stock vs. Fed Rate</h3>
+            <p class="pcard-sub">Macro meets markets</p>
+            <p class="pcard-stat">&#10022; 1997–2024 time series</p>
+            <p class="pcard-desc">Time-series analysis of how Federal Reserve rate changes line up with Amazon's stock performance.</p>
+            <div class="project-tech"><span class="tech-tag">Python</span><span class="tech-tag">Pandas</span><span class="tech-tag">Matplotlib</span></div>
+          </div>
+          <div class="pcard-actions">
+            <span class="pbtn pbtn-muted">Demo coming soon</span>
+          </div>
+        </article>
+        <article class="pcard" data-cat="cloud" style="--accent: #A78BFA; --i: 10;">
+          <div class="pcard-cover">
+            <span class="pcard-emoji" aria-hidden="true">☁️</span>
+            <span class="pcard-badge">Cloud</span>
+          </div>
+          <div class="pcard-body">
+            <h3 class="pcard-title">AWS Auto-Scaling Setup</h3>
+            <p class="pcard-sub">Self-healing infrastructure</p>
+            <p class="pcard-stat">&#10022; Auto Scaling + load balancing</p>
+            <p class="pcard-desc">Automated an AWS architecture with EC2 Auto Scaling Groups, a Network Load Balancer, and boto3 recovery scripts.</p>
+            <div class="project-tech"><span class="tech-tag">AWS EC2</span><span class="tech-tag">NLB</span><span class="tech-tag">boto3</span></div>
+          </div>
+          <div class="pcard-actions">
+            <span class="pbtn pbtn-muted">Demo coming soon</span>
+          </div>
+        </article>
       </div>
     </div>
   </section>

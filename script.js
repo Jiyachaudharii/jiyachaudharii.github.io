@@ -54,7 +54,7 @@ fadeTargets.forEach((el, i) => {
 
 // Cursor-reactive glow: track pointer position within each glass card
 const glowTargets = document.querySelectorAll(
-  '.project-card, .skill-group, .stat-card, .contact-card, .timeline-card, .about-text, .edu-card, .glass'
+  '.project-card, .skill-group, .stat-card, .contact-card, .timeline-card, .about-text, .edu-card, .glass, .pcard'
 );
 
 glowTargets.forEach(el => {
@@ -67,52 +67,34 @@ glowTargets.forEach(el => {
   });
 });
 
-// Projects: carousel navigation + view-all toggle
+// Projects: pop cards in when the grid scrolls into view
 const projectsGrid = document.getElementById('projects-grid');
-const carouselNav = document.getElementById('carousel-nav');
-const viewToggle = document.getElementById('view-toggle');
-const prevBtn = document.getElementById('prev-project');
-const nextBtn = document.getElementById('next-project');
-const counterEl = document.getElementById('carousel-counter');
-
 if (projectsGrid) {
-  const cards = Array.from(projectsGrid.querySelectorAll('.project-card'));
-  let activeIndex = cards.findIndex(c => c.classList.contains('active'));
-  if (activeIndex === -1) activeIndex = 0;
-  let gridView = false;
-
-  const showCard = (index) => {
-    cards.forEach((card, i) => {
-      card.classList.toggle('active', i === index);
-      if (i === index) card.classList.add('visible'); // ensure it's not stuck at opacity:0
-    });
-    counterEl.textContent = `${index + 1} / ${cards.length}`;
-  };
-
-  showCard(activeIndex);
-
-  prevBtn.addEventListener('click', () => {
-    activeIndex = (activeIndex - 1 + cards.length) % cards.length;
-    showCard(activeIndex);
-  });
-
-  nextBtn.addEventListener('click', () => {
-    activeIndex = (activeIndex + 1) % cards.length;
-    showCard(activeIndex);
-  });
-
-  viewToggle.addEventListener('click', () => {
-    gridView = !gridView;
-    if (gridView) {
-      projectsGrid.classList.remove('carousel-mode');
-      carouselNav.classList.add('nav-hidden');
-      viewToggle.textContent = 'View carousel ←';
-      cards.forEach(card => card.classList.add('visible'));
-    } else {
-      projectsGrid.classList.add('carousel-mode');
-      carouselNav.classList.remove('nav-hidden');
-      viewToggle.textContent = 'View all projects →';
-      showCard(activeIndex);
+  new IntersectionObserver((entries, obs) => {
+    if (entries[0].isIntersecting) {
+      projectsGrid.classList.add('in');
+      obs.disconnect();
     }
+  }, { threshold: 0.05 }).observe(projectsGrid);
+
+  // Projects: filter chips
+  const chips = document.querySelectorAll('.filter-chip');
+  const cards = projectsGrid.querySelectorAll('.pcard');
+  chips.forEach(chip => {
+    chip.addEventListener('click', () => {
+      chips.forEach(c => c.classList.toggle('active', c === chip));
+      const keys = chip.dataset.filter.split(' ');
+      let shown = 0;
+      cards.forEach(card => {
+        const cats = card.dataset.cat.split(' ');
+        const match = keys.includes('all') || keys.some(k => cats.includes(k));
+        card.classList.toggle('hide', !match);
+        if (match) card.style.setProperty('--i', shown++);
+      });
+      // Replay the pop-in for the filtered set
+      projectsGrid.classList.remove('in');
+      void projectsGrid.offsetWidth;
+      projectsGrid.classList.add('in');
+    });
   });
 }
