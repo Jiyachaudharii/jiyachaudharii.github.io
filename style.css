@@ -657,6 +657,7 @@ section { position: relative; z-index: 1; padding: 7rem 0; }
 }
 
 .pcard-body { padding: 1.3rem 1.5rem 0.4rem; flex: 1; display: flex; flex-direction: column; }
+.pcard-body:last-child { padding-bottom: 1.5rem; }
 .pcard-title { font-size: 1.2rem; margin: 0; }
 .pcard-sub { font-family: var(--font-mono); font-size: 0.78rem; color: var(--ink-faint); margin: 0.2rem 0 0.8rem; }
 .pcard-stat { font-size: 0.85rem; font-weight: 600; color: var(--accent); margin: 0 0 0.7rem; }
@@ -678,8 +679,6 @@ section { position: relative; z-index: 1; padding: 7rem 0; }
 .pbtn:hover { transform: translateY(-2px); border-color: var(--accent); }
 .pbtn-live { color: var(--ground); background: var(--accent); border-color: transparent; }
 .pbtn-live:hover { background: var(--accent); filter: brightness(1.1); }
-.pbtn-muted { color: var(--ink-faint); background: transparent; border-style: dashed; }
-.pbtn-muted:hover { transform: none; border-color: var(--glass-border); }
 
 @media (prefers-reduced-motion: reduce) {
   .pgrid.in .pcard { animation: none; }
