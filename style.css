@@ -1260,3 +1260,133 @@ h1, h2, h3 { text-wrap: balance; }
 @media (prefers-reduced-motion: reduce) {
   body::after { animation: none; }
 }
+
+/* =========================================================
+   EDITORIAL TYPE
+   Fashion-magazine serif: high-contrast Didone headlines,
+   book-serif body, tracked small caps. Thin, sharp rules.
+   ========================================================= */
+
+:root {
+  --font-display: 'Bodoni Moda', 'Didot', 'Bodoni 72', serif;
+  --font-body: 'Libre Caslon Text', Georgia, serif;
+  --font-label: 'DM Sans', system-ui, sans-serif;
+  --font-mono: var(--font-label);
+}
+
+body { font-family: var(--font-body); font-size: 15.5px; line-height: 1.7; }
+
+/* Soft vignette like the print */
+.aurora {
+  display: block;
+  background: radial-gradient(ellipse at center, transparent 55%, rgba(13, 13, 13, 0.16) 100%);
+}
+.aurora-blob { display: none; }
+
+/* Tracked small-caps labels everywhere mono used to be */
+.hero-greeting, .hero-realname, .hero-tagline, .timeline-date, .stat-label,
+.skill-group-title, .tech-tag, .filter-chip, .pcard-sub, .pcard-badge,
+.nav-links a, .projects-sub, .hero-photo figcaption, footer {
+  font-family: var(--font-label);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  font-size: 0.7rem;
+}
+.projects-sub { text-transform: none; letter-spacing: 0; font-family: var(--font-body); font-style: italic; font-size: 1rem; }
+.hero-realname { text-transform: none; letter-spacing: 0.02em; font-family: var(--font-body); font-style: italic; font-size: 0.9rem; }
+
+/* Headlines */
+.hero-name, .section-title, .pcard-title, .stat-number, .nav-logo, .zine-side,
+.timeline-role {
+  font-family: var(--font-display);
+  text-transform: none;
+  font-weight: 400;
+}
+.hero-name {
+  font-size: clamp(3.6rem, 10.5vw, 8.4rem);
+  line-height: 0.82;
+  letter-spacing: -0.035em;
+}
+.hero-name .n1 { display: block; font-weight: 400; }
+.hero-name .n2 { display: block; font-style: italic; font-weight: 400; margin-left: 0.55em; }
+
+.section-title {
+  font-size: clamp(2.6rem, 6vw, 4.4rem);
+  letter-spacing: -0.03em;
+  line-height: 0.95;
+  border-bottom: 1px solid var(--ink);
+  padding-bottom: 0.6rem;
+}
+.section-title em { font-style: italic; }
+
+.zine-side {
+  font-size: clamp(4.5rem, 10vw, 9.5rem);
+  font-style: italic;
+  letter-spacing: -0.03em;
+  line-height: 0.75;
+}
+
+.nav-logo { font-size: 1.4rem; font-style: italic; letter-spacing: -0.02em; }
+.timeline-role { font-size: 1.35rem; letter-spacing: -0.01em; }
+.stat-number { font-size: 1.9rem; letter-spacing: -0.02em; text-transform: none; }
+.pcard-title { font-size: 1.65rem; line-height: 1.05; letter-spacing: -0.02em; text-transform: none; }
+
+/* Tagline: thin rules instead of a black bar */
+.hero-tagline {
+  background: none;
+  color: var(--ink);
+  padding: 0.5rem 0;
+  border-top: 1px solid var(--ink);
+  border-bottom: 1px solid var(--ink);
+}
+.hero-bio { font-size: 1.1rem; }
+
+/* Sharp, thin frames — no chunky offsets */
+.glass,
+.about-text, .stat-card,
+.timeline-card, .edu-card,
+.skill-group,
+.contact-card,
+.pcard,
+#navbar {
+  border: 1px solid var(--ink);
+  border-radius: 0;
+  box-shadow: none;
+}
+#navbar { background: rgba(235, 233, 228, 0.9); }
+.timeline-card:hover, .edu-card:hover, .skill-group:hover, .contact-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 24px -12px rgba(13, 13, 13, 0.35);
+}
+.pcard:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 30px -16px rgba(13, 13, 13, 0.45);
+}
+.pcard-cover { border-bottom: 1px solid var(--ink); }
+
+.btn, .pbtn, .filter-chip, .tag, .tech-tag, .pcard-badge, .nav-links a, .nav-toggle { border-radius: 0; }
+.btn, .pbtn {
+  font-family: var(--font-label);
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  font-size: 0.72rem;
+  font-weight: 600;
+  border: 1px solid var(--ink);
+}
+.btn { padding: 1rem 1.8rem; }
+.btn-primary, .pbtn-live, .filter-chip.active { box-shadow: none; }
+.btn-primary:hover { box-shadow: none; transform: translateY(-2px); }
+.btn-ghost { box-shadow: none; background: transparent; }
+.btn-ghost:hover { background: var(--ink); color: var(--ground); transform: translateY(-2px); }
+.filter-chip, .tech-tag, .tag, .pbtn { border-width: 1px; }
+.tag { font-family: var(--font-body); font-size: 0.85rem; }
+
+/* Photo: gallery print */
+.hero-photo { padding: 12px 12px 0; border-width: 1px; box-shadow: 0 24px 40px -22px rgba(13,13,13,0.5); transform: rotate(-1.5deg); }
+.hero-photo img { border: 0; }
+.hero-photo::after { inset: 12px 12px auto 12px; }
+
+.timeline::before { width: 1px; background: var(--ink); opacity: 0.6; }
+.timeline-dot { width: 9px; height: 9px; border-width: 1px; left: calc(-1.6rem + 2px); }
+
+.about-text { font-size: 1.02rem; }
